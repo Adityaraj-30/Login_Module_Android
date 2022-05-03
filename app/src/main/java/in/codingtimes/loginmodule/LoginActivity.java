@@ -44,8 +44,10 @@ public class LoginActivity extends AppCompatActivity {
             textUsernameLayout.setError("Username must not be empty");
         } else if (password.isEmpty()) {
             textPasswordInput.setError("Password must not be empty");
-        } else if (!username.equals("admin") && !password.equals("admin")) {
+        } else if (!username.equals("admin")) {
             showErrorDialog();
+        } else if(!password.equals("admin")){
+             showErrorDialog();
         } else {
             performLogin();
         }
